@@ -1,0 +1,86 @@
+$settings: (
+    breakpoint: (
+        mobile: (max-width: 700px),
+        desktop: (min-width: 701px)
+    ),
+
+    layout: (
+        header-height: 100px,
+        form-width: 700px
+    ),
+
+    grid: (
+        num-cols: 12,
+        gutter: 4rem,
+        max-width: 1400px
+    ),
+
+    color: (
+        text:  #ECEEEB,
+        text-secondary: #F8FAF7,
+        background: #0E1C1D,
+        background-secondary: #060C0D,
+
+
+        primary:#BF5E81,
+        secondary:  #03A6A6,
+        tertiary: #C49068,
+
+        primary-darker:  #401F2B,
+        primary-lighter: #CC648A,
+
+        secondary-darker: #026666,
+        secondary-lighter: #05F2F2,
+
+        tertiary-darker: #856146,
+        tertiary-lighter: #D1996F,
+
+        success: #218A49,
+        error: #8A332F
+    ),
+
+    rem-height: 10px,
+    rem-height-mobile: 8px,
+
+    font: (
+        family: (
+            body: "'IBM Plex Sans', sans-serif",
+            heading: "'IBM Plex Sans', sans-serif",
+            monospace: "'IBM Plex Mono', monospace"
+        ),
+        style: (
+            italic: (
+                weight: 400,
+                style: 'italic'
+            ),
+            normal: (
+                weight: 400,
+                style: 'normal'
+            ),
+            bold: (
+                weight: 700,
+                style: 'normal'
+            ),
+            bold-italic: (
+                weight: 700,
+                style: 'italic'
+            )
+        ),
+        size: (
+            base: 2, // * 1rem
+            large: 3,
+            x-large: 4,
+            xx-large: 6,
+            xxx-large: 8,
+            small: 1.75,
+            x-small: 1.5,
+            xx-small: 1.25,
+            xxx-small: 1
+        ),
+        line-height: (
+            base: 2.5 // * 1rem
+        )
+    )
+);
+
+
