@@ -1,0 +1,21 @@
+@include critical {
+    :root {
+        @each $name, $color in map-get($settings, color) {
+            --color-#{$name}: #{$color};
+        }
+
+        @each $name, $color in map-get($settings, theme) {
+            --theme-#{$name}: #{get-color($color)};
+        }
+    }
+
+    
+    html body {
+        padding: 0;
+        margin: 0;
+        
+        * {
+            box-sizing: border-box !important;
+        }
+    }
+}

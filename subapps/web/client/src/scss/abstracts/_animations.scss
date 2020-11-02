@@ -1,0 +1,37 @@
+@include non-critical {
+    @keyframes logo--spin {
+        from {
+            transform: rotate(360deg);
+        }
+        to {
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes logo--rect {
+        from {
+            height: 0;
+        }
+        to {
+            height: 40;
+        }
+    }
+}
+    @keyframes logo--move {
+        to {
+            transform: translateX(0);
+        }
+    }
+    @keyframes header-text--grow {
+        to {
+            width: 100%;
+        }
+    }
+    @keyframes header-text--uncover {
+        from {
+            background-position-x: 100%;
+        }
+        to {
+            background-position-x: 0;
+        }
+    }

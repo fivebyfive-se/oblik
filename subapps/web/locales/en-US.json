@@ -1,0 +1,11 @@
+{
+	"menu": {
+		"secrets": "Latest secrets",
+		"passwords": "Passwords",
+		"groups": "Groups",
+		"payment": "Payment info",
+		"notes": "Notes",
+		"settings": "Settings",
+		"chat": "Chat"
+	}
+}

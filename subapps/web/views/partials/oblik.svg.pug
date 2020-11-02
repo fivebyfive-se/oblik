@@ -1,0 +1,13 @@
+svg(width="212", height="212", viewBox="0 0 56 56", xmlns="http://www.w3.org/2000/svg")
+  defs
+    filter#greyscale(color-interpolation-filters="sRGB")
+      feColorMatrix(values="0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0.21 0.72 0.072 0 0 0 0 0 1 0 ")
+  g.media__screen--only(transform="translate(28)")
+    g#logo.rotate--45(style="fill:var(--theme-header-bg)")
+      rect#rect-1-red.rotate--0(width="14", height="40", fill="var(--color-red)", style="mix-blend-mode:normal;paint-order:markers stroke fill")
+      rect#rect-2-blue.rotate--90(x="0", y="-40", width="14", height="40", fill="var(--color-dark-blue)", style="mix-blend-mode:multiply;paint-order:markers stroke fill")
+      rect#rect-3-orange.rotate--180(x="-40", y="-40", width="14", height="40", fill="var(--color-orange)", style="mix-blend-mode:multiply;paint-order:markers stroke fill")
+      rect#rect-4-yellow.rotate--270(x="-40", y="0", width="14", height="40", fill="var(--color-yellow)", style="mix-blend-mode:multiply;paint-order:markers stroke fill")
+  g.media__print--only(transform="translate(28)", style="mix-blend-mode:normal")
+    use(href="#logo", filter="url(#greyscale)")
+  

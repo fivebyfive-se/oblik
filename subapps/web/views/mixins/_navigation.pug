@@ -1,0 +1,15 @@
+- const baseNavItem = 'header__menu__item';
+
+mixin nav-link(link, label, icon, ...classes)
+    -
+        const currLink = `page/`;
+        const className = [...classes, link === currLink ? 'active' : null]
+            .filter((v) => !!v)
+            .map((v) => `${baseNavItem}--${v}`)
+            .join(' ');
+    a(href='/' + link, class=`${baseNavItem} ${className}`)&attributes(attributes)
+        +remixicon(icon)(class=`${baseNavItem}__icon`)
+        span(class=`${baseNavItem}__label`)= label
+
+mixin nav-spacer()
+    div.header__menu__spacer

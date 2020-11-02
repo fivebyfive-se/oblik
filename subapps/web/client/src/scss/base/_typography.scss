@@ -1,0 +1,78 @@
+
+@include critical {
+    @font-face {
+        font-family: 'Commissioner';
+        src: url('/css/fonts/Commissioner_VF_1.001.woff2');
+    }
+
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        font-size: get-setting('rem-height');
+    }
+      
+      // Site-wide base styles.
+    body, form, input, select, textarea, option, button {
+            @extend %font, 
+                %font--body, 
+                %font--base;
+    }
+
+    h1, h2, h3, h4, h5 {
+        @extend %font, 
+            %font--heading,
+            %font--bold;
+        @include margin(0);
+    }
+    p {
+        @extend %font,
+            %font--body,
+            %font--normal;
+    }
+    strong, b {
+        @extend %font--bold;
+        em, i {
+            @extend %font--bold-italic;
+        }
+    }
+    em, i {
+        @extend %font--italic;
+        strong, b {
+            @extend %font--bold-italic;
+        }
+    }
+
+
+    h1, .heading1 { 
+        @extend %font--black,
+            %font--xx-large;
+    }
+    h2, .heading2 { 
+        @extend %font--extra-bold,
+            %font--x-large;
+    }
+    h3, .heading3 { 
+        @extend %font--bold,
+            %font--x-large;
+    }
+    h4, .heading4 { 
+        @extend %font--bold,
+            %font--large;
+    }
+    h5, .heading5 { 
+        @extend %font--large,
+            %font--bold-italic;
+    }
+
+    pre, code, .mono {
+        @extend %font--monospace;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+@include non-critical {
+}
+

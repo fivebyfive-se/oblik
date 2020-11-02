@@ -1,0 +1,44 @@
+@include critical {
+    body {
+        margin: 0;
+        padding: 0;
+
+        background-color: var(--theme-body-bg);
+        color: var(--theme-body-text);
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+    #app {
+        display: grid;
+        grid-template-rows: get-dimension(header-height) 1fr;
+        grid-template-columns: 1fr Min(100%, get-dimension(container-width)) 1fr;
+        grid-template-areas:
+            ". hdr ."
+            ". main ."
+        ;
+        width: 100vw;
+
+        > header {
+            grid-area: hdr;
+        }
+        > main {
+            grid-area: main;
+            height: 100vh;
+        }
+    }
+}
+
+@include non-critical {
+    a {
+        color: var(--color-blue);
+        &:hover, &:focus {
+            color: var(--color-orange);
+        }
+    }
+    @for $step from 0 to 8  {
+        $rotate: $step * 45;
+        .rotate--#{$rotate} {
+            transform: rotate(#{$rotate}deg);
+        }
+    }
+}

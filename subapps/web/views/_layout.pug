@@ -1,0 +1,47 @@
+include mixins/_classes.pug
+include mixins/_remixicon.pug
+include mixins/_scripts.pug
+include mixins/_navigation.pug
+
+doctype html
+html(lang=lang, data-theme=theme)
+    head
+        title Oblik
+        link(rel='stylesheet', href='/css/critical.css')
+
+        block head
+    body
+        article#app
+            header.header
+                a.header__logo(href='/')
+                    include partials/oblik.svg.pug
+                h1.header__title #[a(href='/') Oblik]
+
+                button.header__menu-button(data-toggle='.header', data-toggle-class='header--menu-visible')
+
+                nav.header__menu
+                    +nav-link('secrets/latest', __('menu.secrets'), 'calendar-event')
+                    +nav-link('secrets/passwords', __('menu.passwords'), 'lock-password')
+                    +nav-link('secrets/groups', __('menu.groups'), 'group')
+                    +nav-link('secrets/payment', __('menu.payment'), 'bank-card-2')
+                    +nav-link('secrets/notes', __('menu.notes'), 'sticky-note')
+                    +nav-spacer()
+                    +nav-link('user/settings', __('menu.settings'), 'user-settings', 'highlight')
+                    +nav-spacer()
+                    +nav-link('user/chat', __('menu.chat'), 'chat-4', 'highlight--alternate')
+
+
+            main
+                block content
+                footer Foot
+
+        link(rel='stylesheet', href='//cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css')
+        link(href="//fonts.googleapis.com/css2?family=Fira+Code&display=swap", rel="stylesheet")
+        link(rel='stylesheet', href='/css/non-critical.css')      
+
+        +script('/js/main.js')
+
+        +renderScripts()
+        
+        block styles
+        block scripts

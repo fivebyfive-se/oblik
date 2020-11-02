@@ -1,0 +1,28 @@
+@include critical {
+    $medias: (screen, print);
+    $displays: (inline, flex, grid, inline-block, inline-flex, inline-grid);
+
+    @each $media-show in $medias {
+        @media #{$media-show} {
+            .media__#{$media-show}--show, .media__#{$media-show}--only {
+                display: block;
+                @each $display in $displays {
+                    &--#{$display} {
+                        display: #{$display};
+                    }
+                }    
+            }
+            .media__#{$media-show}--hide {
+                display: none !important;
+            }
+
+            @each $media-hide in $medias {
+                @if ($media-hide != $media-show) {
+                    .media__#{$media-hide}--only {
+                        display: none !important;               
+                    }
+                }
+            }
+        }
+    }
+}

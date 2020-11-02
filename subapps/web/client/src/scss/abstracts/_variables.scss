@@ -1,0 +1,131 @@
+$settings: (
+    rem-height: 10px,
+
+    breakpoint: (
+        mobile: (max-width: 700px),
+        desktop: (min-width: 701px)
+    ),
+
+    color: (
+        blackish: #202527,
+        darkest-blue: #011F26,
+        darker-grey: #1F1B18,
+        dark-grey: #3D3530,
+        grey: #574C45,
+        grey-orange: #A38C7F,
+        grey-pink: #E6D1C5,
+        whiteish: #FFE8DB,
+        dark-red: #400101,
+        medium-red: #8C0303,
+        red: #F20505,
+        dark-blue: #037F8C,
+        blue: #04BFBF,
+        reddish-orange: #DB3607,
+        orange: #F25C05,
+        yellowish-orange: #DB7407,
+        yellow: #F9A107
+    ),
+
+    theme: (
+        header-bg: blue,
+        header-text: blackish,
+        header-active-bg: grey,
+        header-active-text: whiteish,
+
+        menu-button: whiteish,
+        menu-bg: dark-grey,
+
+        menu-item: yellow,
+        menu-item-highlight: blue,
+        menu-item-highlight-alt: yellowish-orange,
+
+        menu-spacer: darker-grey,
+
+        body-bg: darker-grey,
+        body-text: whiteish,
+
+        heading-1: yellow
+    ),
+
+    dimension: (
+        container-width: 1152px,
+        header-height: 120px,
+        logo-height: 80px,
+        menu-button-width: 40px,
+        menu-button-height: 20px
+    ),
+
+    animation: (
+        slow: 6s,
+        medium: 3s,
+        fast: 1s
+    ),
+
+    transition: (
+        slow: .6s,
+        medium: .4s,
+        fast: .2s
+    ),
+
+    font: (
+        family: (
+            body: "'Commissioner', sans-serif",
+            heading: "'Commissioner', sans-serif",
+            monospace: "'Fira Code', monospace"
+        ),
+
+        size: (
+            small: (
+                font-size: 1.25rem,
+                line-height: 2rem
+            ),
+            base: (
+                font-size: 2rem,
+                line-height: 3rem,
+            ),
+            large: (
+                font-size: 3rem,
+                line-height: 4rem
+            ),
+            x-large: (
+                font-size: 5rem,
+                line-height: 6rem
+            ),
+            xx-large: (
+                font-size: 8rem,
+                line-height: 10rem
+            ),
+            xxx-large: (
+                font-size: 13rem,
+                line-height: 15rem
+            )
+        ),
+        
+        style: (
+            normal: (
+                variation-settings: "'wght' 400"
+            ),
+            italic: (
+                variation-settings: "'slnt' -6"
+            ),
+            semi-bold: (
+                variation-settings: "'wght' 550, 'FLAR' 100, 'VOLM' 0"
+            ),
+            bold: (
+                variation-settings: "'wght' 600, 'FLAR' 50, 'VOLM' 50"
+            ),
+            bold-italic: (
+                variation-settings: "'wght' 600, 'slnt' -6"
+            ),
+            light: (
+                variation-settings: "'wght' 200, 'slnt' -6"
+            ),
+            extra-bold: (
+                variation-settings: "'wght' 750, 'FLAR' 20, 'VOLM' 10" 
+            ),
+            black: (
+                variation-settings: "'wght' 900, 'FLAR' 50, 'VOLM' 0" 
+            )
+        )
+    )
+);
